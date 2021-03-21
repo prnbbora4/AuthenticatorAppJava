@@ -1,4 +1,4 @@
-package net.smallacademy.authenticatorapp;
+package com.prnbbora4.authenticatorapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import com.prnbbora4.authenticatorapp.R;
 
 public class Login extends AppCompatActivity {
     EditText mEmail,mPassword;

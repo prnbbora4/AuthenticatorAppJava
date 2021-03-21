@@ -1,4 +1,4 @@
-package net.smallacademy.authenticatorapp;
+package com.prnbbora4.authenticatorapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +25,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+
+import com.prnbbora4.authenticatorapp.R;
 
 import java.util.HashMap;
 import java.util.Map;
