@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AuthenticatorApp</string>
+    <string name="app_name">Blood Donation</string>
 
     <string-array name="bloodGroupItems">
         <item>O+</item>
