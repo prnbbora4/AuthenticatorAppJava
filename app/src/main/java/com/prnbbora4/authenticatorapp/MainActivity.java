@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
 
 public class MainActivity extends AppCompatActivity {
     private static final int GALLERY_INTENT_CODE = 1023 ;
-    TextView fullName,email,phone,verifyMsg;
+    TextView fullName,email,phone,verifyMsg, bloodGroup;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         phone = findViewById(R.id.profilePhone);
         fullName = findViewById(R.id.profileName);
         email    = findViewById(R.id.profileEmail);
+        bloodGroup    = findViewById(R.id.bloodGroup);
+
         resetPassLocal = findViewById(R.id.resetPasswordLocal);
 
         profileImage = findViewById(R.id.profileImage);
@@ -112,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
                     phone.setText(documentSnapshot.getString("phone"));
                     fullName.setText(documentSnapshot.getString("fName"));
                     email.setText(documentSnapshot.getString("email"));
+                   try {
+                       bloodGroup.setText(documentSnapshot.getString("bloodGroup"));
+                   }
+                   catch (Exception ignored){
+
+                   }
 
                 }else {
                     Log.d("tag", "onEvent: Document do not exists");
@@ -170,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("fullName",fullName.getText().toString());
                 i.putExtra("email",email.getText().toString());
                 i.putExtra("phone",phone.getText().toString());
+                i.putExtra("bloodGroup",bloodGroup.getText().toString());
                 startActivity(i);
 //
 
